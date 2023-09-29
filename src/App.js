@@ -10,7 +10,7 @@ function App() {
       path: "/",
       element: <Nav />,
       children: [
-        { path: "", element: <Hero /> },
+        { index: true, element: <Hero /> },
         { path: "/courses", element: <Courses /> },
       ],
     },
