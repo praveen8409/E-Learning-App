@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Learn.module.css";
 import coursesData from "../../../data/courses.json";
-import { useParams,Link } from "react-router-dom";
+import { useParams,Link, Outlet } from "react-router-dom";
 
 function Learn() {
   const{courseId} = useParams();
@@ -24,7 +24,9 @@ function Learn() {
           })}
         </ul>
       </div>
-      <div className={style.courses}></div>
+      <div className={style.courses}>
+        <Outlet context={{...course}} />
+      </div>
     </div>
   );
 }
