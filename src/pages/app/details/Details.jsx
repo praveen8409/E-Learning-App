@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Details.module.css";
 import coursesData from "../../../data/courses.json";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 
 function Details() {
   const {courseId} = useParams();
@@ -20,7 +20,9 @@ function Details() {
         </div>
       </div>
 
+      <Link to={`/learn/${course.id}`}>
       <button className={style.button}>Start Learning</button>
+      </Link>
     </div>
   );
 }

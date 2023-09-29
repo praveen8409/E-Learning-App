@@ -1,8 +1,11 @@
 import React from "react";
 import style from "./Learn.module.css";
 import coursesData from "../../../data/courses.json";
+import { useParams,Link } from "react-router-dom";
 
 function Learn() {
+  const{courseId} = useParams();
+  const course = coursesData.find((course)=> course.id === courseId )
   return (
     <div className={style.courses_container}>
       <div className={style.heading}>

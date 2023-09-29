@@ -1,7 +1,8 @@
 import Hero from "./pages/app/hero/Hero";
 import Nav from "./components/nav/Nav";
 import Courses from "./pages/app/courses/Courses";
-import Details from "../src/pages/app/details/Details"
+import Details from "../src/pages/app/details/Details";
+import Learn from "../src/pages/app/learn/Learn"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -20,6 +21,10 @@ function App() {
               element: <Details/>
             }
           ]
+         },
+         {
+            path:'/learn/:courseId',
+            element:<Learn/>,
          },
       ],
     },
